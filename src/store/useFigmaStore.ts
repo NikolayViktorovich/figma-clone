@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { Layer } from '../types';
+import type { Layer } from '../types'; 
 
 interface FigmaState {
   canvas: {
@@ -22,6 +22,7 @@ export const useFigmaStore = create<FigmaState>((set) => ({
   },
   layers: [],
   selectedLayerIds: [],
+
   setZoom: (zoom) => set((state) => ({ canvas: { ...state.canvas, zoom } })),
   setOffset: (offset) => set((state) => ({ canvas: { ...state.canvas, offset } })),
   addLayer: (layer) => set((state) => ({ layers: [...state.layers, layer] })),

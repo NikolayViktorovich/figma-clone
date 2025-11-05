@@ -23,6 +23,15 @@
   background: transparent;
 }
 
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,33 +39,158 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
   line-height: 16px;
-  color: #000000;
 }
 
 .figma-button {
-  @apply px-3 py-1.5 rounded text-sm font-medium bg-white border border-gray-300 hover:bg-gray-50 active:bg-gray-100 transition-colors;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.2s;
+}
+
+.figma-button:hover {
+  background-color: #f9fafb;
+}
+
+.figma-button:active {
+  background-color: #f3f4f6;
 }
 
 .figma-button-primary {
-  @apply px-3 py-1.5 rounded text-sm font-medium bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 transition-colors;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #3b82f6;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.figma-button-primary:hover {
+  background-color: #2563eb;
+}
+
+.figma-button-primary:active {
+  background-color: #1d4ed8;
 }
 
 .figma-input {
-  @apply px-2 py-1 text-sm border border-gray-300 rounded bg-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.figma-input:focus {
+  outline: none;
+  border-color: #3b82f6;
 }
 
 .figma-toolbar-button {
-  @apply w-8 h-8 flex items-center justify-center rounded hover:bg-gray-200 active:bg-gray-300 transition-colors;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.figma-toolbar-button:hover {
+  background-color: #e5e7eb;
+}
+
+.figma-toolbar-button:active {
+  background-color: #d1d5db;
 }
 
 .figma-sidebar-section {
-  @apply border-b border-gray-200 py-2 px-3;
+  border-bottom: 1px solid #e5e7eb;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .figma-layer-item {
-  @apply px-2 py-1 text-sm hover:bg-blue-50 rounded cursor-pointer flex items-center justify-between;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.figma-layer-item:hover {
+  background-color: #dbeafe;
 }
 
 .figma-layer-item-selected {
-  @apply bg-blue-100 text-blue-600 font-medium;
+  background-color: #dbeafe;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* Dark mode styles */
+.dark .figma-button {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.dark .figma-button:hover {
+  background-color: #4b5563;
+}
+
+.dark .figma-button:active {
+  background-color: #6b7280;
+}
+
+.dark .figma-input {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.dark .figma-input:focus {
+  border-color: #3b82f6;
+}
+
+.dark .figma-toolbar-button:hover {
+  background-color: #4b5563;
+}
+
+.dark .figma-toolbar-button:active {
+  background-color: #6b7280;
+}
+
+.dark .figma-sidebar-section {
+  border-bottom-color: #374151;
+}
+
+.dark .figma-layer-item:hover {
+  background-color: #374151;
+}
+
+.dark .figma-layer-item-selected {
+  background-color: #1e40af;
+  color: #dbeafe;
 }
